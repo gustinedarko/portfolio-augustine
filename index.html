@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="./index.js" defer></script>
+    <title>ADarko Portfolio</title>
+</head>
+
+<body class="text-lg font-normal text-slate-700 bg-slate-200">
+
+    <nav id="navbar" class="flex gap-40 fixed w-full py-3">
+
+        <div class="justify-items-start px-8">
+            <a class="nav-text text-slate-800 hover:text-blue-400 transition-colors duration-200 font-bold" href="#">
+                <span>Ag.Darko</span>
+            </a>
+        </div>
+
+        <div class="flex flex-row justify-self-center text-base gap-10">
+            <a class="nav-text text-slate-800 font-semibold hover:text-blue-400 transition-colors duration-200" href="#home"><span>HOME</span></a>
+            <a class="nav-text text-slate-800 font-semibold hover:text-blue-400 transition-colors duration-200" href="#about"><span>ABOUT</span></a>
+            <a class="nav-text text-slate-800 font-semibold hover:text-blue-400 transition-colors duration-200" href="#projects"><span>PROJECTS</span></a>
+            <a class="nav-text text-slate-800 font-semibold hover:text-blue-400 transition-colors duration-200" href="#skills"><span>SKILLS</span></a>
+            <a class="nav-text text-slate-800 font-semibold hover:text-blue-400 transition-colors duration-200" href="#resume"><span>RESUME</span></a>
+            <a class="nav-text text-slate-800 font-semibold hover:text-blue-400 transition-colors duration-200" href="#testimonials"><span>TESTIMIALS</span></a>
+            <a class="nav-text text-slate-800 font-semibold hover:text-blue-400 transition-colors duration-200" href="#contact"><span>CONTACT</span></a>
+        </div>
+
+    </nav>
+
+    <div class="container mx-auto">
+
+        <header id="home" class="h-screen grid grid-cols-2 justify-items-center items-center bg-slate-100">
+
+            <div class="text-center">
+
+                <h1 class="text-6xl font-normal text-slate-800 tracking-tight mb-2">Hi, I'm</h1>
+                <h1 class="text-6xl font-bold text-slate-800 tracking-tight mb-4">Augustine Darko</h1>
+                <p class=" text-2xl font-semibold mb-4">Web Developer & Graphic Designer</p>
+                <p class="mb-4">I build interactive websites and craft clean, impactful logos. With a Background in Printing Technology, I Design with Passion while Exploring the World.</p>
+                <button><a class="uppercase border-0 bg-[#00ADB5] hover:bg-[#008891] text-white font-medium mt-2 py-2 px-3 rounded-md inline-block" href="#projects">view my works</a></button>
+            </div>
+
+            <div class="w-6/10">
+                <img class="" src="./images/aug-profile1.PNG" alt="Profile photo of Augustine Darko">
+            </div>
+        </header>
+
+        <section id="about">
+            <h2 class="flex justify-center text-4xl font-bold"><span class="font-light">About </span> Me</h2>
+
+            <div class="h-screen grid grid-cols-2 justify-items-center items-center">
+
+                <div class="w-3/6">
+                    <img class="rounded-full" src="./images/aug-profile3.PNG" alt="Another Profile Image">
+                </div>
+
+                <div class="w-8/10">
+                    <p>I'm a passionate
+                    designer and aspiring frontend web developer with a growing skill set in both creative and technical fields.
+                    My journey began with graphic design, where I focused on creating bold, clean, and memorable logos that
+                    bring brand ideas to life. Over time, my curiosity about how design meets functionality led me to explore
+                    web development. I'm currently enrolled in a frontend web development training program, where I've already
+                    built and hosted my first website and continue to grow my skills in HTML, CSS, and JavaScript. With each
+                    project, I aim to blend design aesthetics with user-friendly functionality. I'm excited to keep learning,
+                    building, and turning ideas into digital experiences that matter</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2 class="flex justify-center text-4xl font-bold"><span class="font-light">My </span> Projects</h2>
+
+            <h3 class="flex justify-center text-2xl font-semibold">Web Development Projects</h3>
+
+            <div class="grid grid-cols-3 gap-8">
+
+                <div class="bg-white p-6 rounded-2xl shadow-md">
+                    <a href="http://">
+                        <img src="./images/klothing-site-image.png" alt="Klothing website">
+                    </a>
+                    <p>The First website I built, the tools used where HTML and CSS. I learnt how to go about building multiple webpages, and also deploying a website.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-md">
+                    <a href="http://">
+                        <img src="./images/emeraldd&d.jpeg" alt="Drag and drop Demonstration API">
+                    </a>
+                    <p>Drag and Drop Gamified Demonstration was a project designed for a group presentation to enlighten our colleagues about the HTML API's. The tools used in the development of this where HTML, CSS, and Javascript.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-md">
+                    <a href="http://">
+                        <img src="./images/portfolio-landingpage.jpeg" alt="My portfolio website">
+                    </a>
+                    <p>This current portfolio project was designed to potral and record my skills and progress as a junior web developer. The tools used in the development of this where HTML, CSS, and Javascript.</p>
+                </div>
+
+            </div>
+
+            <h3 class="flex justify-center text-2xl font-semibold">Graphic Design Projects</h3>
+
+            <div class="grid grid-cols-4 gap-8">
+
+                <div class="bg-white p-6 rounded-2xl shadow-md">
+                    <img src="./images/GAF-logo.png" alt="Gustine Art and Frames Logo">
+                    <p>The Gustine Art and Frames Logo was designed in Illustrator, to represent the Gustine Art and Frames brand.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-md">
+                    <img src="./images/GAF-Flyer .jpg" alt="Gustine Art and Frames flyer">
+                    <p>The Gustine Art and Frames flyer was designed in Photoshop, to promote the services provided by this brand.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-md">
+                    <img src="./images/SF-blackb.png" alt="SkilzField Logo">
+                    <hr>
+                    <p>The SkilzField Logo was designed in Illustrator, as an additional feature project's creativity check.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-md">
+                    <img src="./images/SF-black.png" alt="SkilzField Silhouette Logo">
+                    <p>The SkilzField Silhouette Logo was designed as an additional feature for use in other aspects of the SkilzField project, and was also designed with the Adobe Illustrator.</p>
+                </div>
+                
+            </div>
+        </section>
+
+        <section id="skills">
+
+            <h2 class="flex justify-center text-4xl font-bold"><span class="font-light">My </span> Skills</h2>
+
+            <div class="grid grid-cols-3 gap-8">
+
+                <div class="bg-white p-6 rounded-2xl shadow-md">
+                    <h4 class="text-xl font-semibold">Frontend Development</h4>
+                    <p>HTML, CSS, Responsive Design, and JavaScript.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow-md">
+                    <h4 class="text-xl font-semibold">Tools & Technologies</h4>
+                    <p>VS Code, Git, GitHub, Tailwind CSS, and Figma.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow-md">
+                    <h4 class="text-xl font-semibold">Graphic Design</h4>
+                    <p>Adobe Illustrator, and Adobe InDesign.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="resume">
+            <h2 class="flex justify-center text-4xl font-bold"><span class="font-light">My </span> Resume</h2>
+
+            <div class="grid grid-cols-2 gap-12">
+
+                <div class="grid gap-y-8">
+
+                    <h4 class="text-xl font-semibold">Education</h4>
+
+                    <div class="bg-white p-6 rounded-2xl shadow-md">
+                        <h4>Web Development</h4>
+                        <p>This was an trainning program where the team guided me in the growing technical and soft skills to strive in the tech feild.</p>
+                        <h5>MEST - Generation Ghana</h5>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl shadow-md">
+                        <h4>Visual Art</h4>
+                        <p>My passion for art and design was exploried at this level of my education, in the fields of picture making, sculpture, and art history.</p>
+                        <h5>Koforidua Senior High Technical School</h5>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl shadow-md">
+                        <h4>Publishing Studies (Printing Technology)</h4>
+                        <p>At this stage I ventured into the feild of designing and printing, its history and the current industy.</p>
+                        <h5>Kwame Nkrumah University of Science and Technology</h5>
+                    </div>
+
+                </div>
+
+                <div class="grid gap-y-8">
+                    
+                    <h4 class="text-xl font-semibold">Experience</h4>
+
+                    <div class="bg-white p-6 rounded-2xl shadow-md">
+                        <h4>Frontend Web Development</h4>
+                        <p>I have developed skills and knowledge in working with the various tools in building the frontend of webpages.</p>
+                        <h5>Project Development</h5>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl shadow-md">
+                        <h4>Graphic Design</h4>
+                        <p>My self taught skills in Adobe Illustrator has been used in the development of logos that depicts and represent its purpose.</p>
+                        <h5>Freelance</h5>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl shadow-md">
+                        <h4>Graphic Packaging Limited</h4>
+                        <p>This working experience taught me the essence and results of effective communication, to the smooth running of the workflow of a production industry.</p>
+                        <h5>Assistant Press Coordinator</h5>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <button><a class="uppercase bg-[#00ADB5] hover:bg-[#008891] text-white font-medium mt-2 py-2 px-3 rounded-md inline-block" href="./pdfs/AUGUSTINE DARKO CV.pdf" target="_blank">download cv</a></button>
+
+        </section>
+
+        <section id="testimonials">
+
+            <h2 class="flex justify-center text-4xl font-bold"><span class="font-light">Peer </span> Recommendations</h2>
+
+            <div class="grid grid-cols-3 gap-8">
+
+                <div>
+                    <img class="rounded-full w-[3rem]" src="./images/danitasprofile.JPG" alt="Danita's profile image">
+                    <div>
+                        <p>"A highly skilled and dedicated professional with expertise in web development and a creative eye for design. If you're looking for someone who's both skilled and easy to collaborate with, I genuinely recommend him."</p>
+                        <h5>Danita Lamptey - Data Analyst & Graphic Designer</h5>
+                    </div>
+                </div>
+                <div>
+                    <img class="rounded-full w-[3rem]" src="./images/stephen-profile.PNG" alt="Stephen's profile image">
+                    <div>
+                        <p>"Augustine Darko is a creative and open-minded professional with a diverse skill set. I highly recommend him."</p>
+                        <h5>Stephen Dwumfour - Web Developer</h5>
+                    </div>
+                </div>
+                <div>
+                    <img class="rounded-full w-[3rem]" src="./images/fidel-profile.PNG" alt="Fidel's profile image">
+                    <div>
+                        <p>"Working with Augustine has been a refreshing experience. He brings creativity, curiosity, and a thoughtful approach to everything he does, and would gladly recommend him."</p>
+                        <h5>Fidel Lamptey - Graphic Designer and Creative Director</h5>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="bg-slate-300 text-slate-800">
+
+            <h2 class="flex justify-center text-4xl font-bold"><span class="font-light">Contact </span> Me</h2>
+
+            <h4 class="flex justify-center text-xl font-semibold">Get In Touch😁</h4>
+
+            <div class="flex justify-around gap-4">
+                <div>
+                    <h4>Email</h4>
+                    <p><a href="mailto:gustine369@gmail.com">gustine369@gmail.com</a></p>
+                </div>
+                <div>
+                    <h4>Phone</h4>
+                    <p>+233501314834</p>
+                </div>
+                <div>
+                    <h4>Address</h4>
+                    <p>Dansoman,Accra <br> A 278/13</p>
+                </div>
+            </div>
+        </section>
+
+        <footer> 
+
+            <div class="bg-slate-300">
+                <div class="flex justify-center gap-4">
+                    <a class="w-6 pt-2" href="http://www.linkedin.com/in/augustine-darko" target="_blank"><img src="./images/linkedin-logo.png" alt="LinkedIn link"></a>
+                    <a class="w-6 pt-2" href="https://github.com/gustinedarko" target="_blank"><img src="./images/github-logo.png" alt="GitHib link"></a>
+                    <a class="w-6 pt-2" href="https://www.instagram.com/gus_tinel?igsh=amw4M2thOHRoZ200&utm_source=qr" target="_blank"><img src="./images/instagram-logo.png" alt="Instagram link" blank></a>
+                </div>
+                <p class="flex justify-center text-sm text-slate-800">Copyright &copy; 2025 Augustine Darko. All righths reserved | 👌👍</p>
+            </div>
+
+        </footer>
+
+    </div>
+
+</body>
+</html>
