@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,54 +10,64 @@
 
 <body class="text-lg font-normal text-slate-700 bg-slate-200">
 
-    <nav id="navbar" class="flex gap-40 fixed w-full py-3">
+    <nav id="navbar" class="flex items-center justify-between fixed w-full py-3 px-6 transition-all duration-300 shadow z-50">
 
-        <div class="justify-items-start px-8">
+        <div>
             <a class="nav-text text-slate-800 hover:text-blue-400 transition-colors duration-200 font-bold" href="#">
                 <span>Ag.Darko</span>
             </a>
         </div>
 
-        <div class="flex flex-row justify-self-center text-base gap-10">
-            <a class="nav-text text-slate-800 font-semibold hover:text-blue-400 transition-colors duration-200" href="#home"><span>HOME</span></a>
-            <a class="nav-text text-slate-800 font-semibold hover:text-blue-400 transition-colors duration-200" href="#about"><span>ABOUT</span></a>
-            <a class="nav-text text-slate-800 font-semibold hover:text-blue-400 transition-colors duration-200" href="#projects"><span>PROJECTS</span></a>
-            <a class="nav-text text-slate-800 font-semibold hover:text-blue-400 transition-colors duration-200" href="#skills"><span>SKILLS</span></a>
-            <a class="nav-text text-slate-800 font-semibold hover:text-blue-400 transition-colors duration-200" href="#resume"><span>RESUME</span></a>
-            <a class="nav-text text-slate-800 font-semibold hover:text-blue-400 transition-colors duration-200" href="#testimonials"><span>TESTIMIALS</span></a>
-            <a class="nav-text text-slate-800 font-semibold hover:text-blue-400 transition-colors duration-200" href="#contact"><span>CONTACT</span></a>
+        <!-- Hamburger (visible only on small screens) -->
+    <div class="md:hidden">
+      <button id="menuBtn" class="nav-text text-slate-800 focus:outline-none hover:text-blue-400 transition-colors duration-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+        <div id="navLinks" class="hidden md:flex flex-row gap-8 text-sm text-slate-800 font-semibold absolute md:static left-1/2 transform md:transform-none -translate-x-1/2 md:translate-x-0 top-16 md:top-auto bg-white md:bg-transparent px-6 py-4 md:p-0 shadow md:shadow-none">
+            <a class="nav-text hover:text-blue-400 transition-colors duration-200" href="#home"><span>HOME</span></a>
+            <a class="nav-text hover:text-blue-400 transition-colors duration-200" href="#about"><span>ABOUT</span></a>
+            <a class="nav-text hover:text-blue-400 transition-colors duration-200" href="#projects"><span>PROJECTS</span></a>
+            <a class="nav-text hover:text-blue-400 transition-colors duration-200" href="#skills"><span>SKILLS</span></a>
+            <a class="nav-text hover:text-blue-400 transition-colors duration-200" href="#resume"><span>RESUME</span></a>
+            <a class="nav-text hover:text-blue-400 transition-colors duration-200" href="#testimonials"><span>TESTIMIALS</span></a>
+            <a class="nav-text hover:text-blue-400 transition-colors duration-200" href="#contact"><span>CONTACT</span></a>
         </div>
 
     </nav>
 
     <div class="container mx-auto">
 
-        <header id="home" class="h-screen grid grid-cols-2 justify-items-center items-center bg-slate-100">
+        <header id="home" class="min-h-screen flex flex-col md:flex-row items-center justify-center bg-slate-50 p-6 md:p-12 lg:p-20">
 
-            <div class="text-center">
+            <div class="text-center mt-20 md:text-left w-full md:w-1/2 lg:w-2/5 flex-shrink-0 order-1 md:order-1 mb-8 md:mb-0 md:mr-10">
 
-                <h1 class="text-6xl font-normal text-slate-800 tracking-tight mb-2">Hi, I'm</h1>
-                <h1 class="text-6xl font-bold text-slate-800 tracking-tight mb-4">Augustine Darko</h1>
-                <p class=" text-2xl font-semibold mb-4">Web Developer & Graphic Designer</p>
-                <p class="mb-4">I build interactive websites and craft clean, impactful logos. With a Background in Printing Technology, I Design with Passion while Exploring the World.</p>
-                <button><a class="uppercase border-0 bg-[#00ADB5] hover:bg-[#008891] text-white font-medium mt-2 py-2 px-3 rounded-md inline-block" href="#projects">view my works</a></button>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-normal text-slate-800 tracking-tight mb-2">Hi, I'm</h1>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-800 tracking-tight mb-4">Augustine Darko</h1>
+                <p class="text-lg sm:text-xl font-semibold mb-4">Web Developer & Graphic Designer</p>
+                <p class="text-base sm:text-lg mb-6 leading-relaxed">I build interactive websites and craft clean, impactful logos. With a Background in Printing Technology, I Design with Passion while Exploring the World.</p>
+                <button><a class="uppercase border-0 bg-[#00ADB5] hover:bg-[#008891] text-white font-medium py-3 px-6 rounded-md inline-block text-base sm:text-lg transition-colors duration-300" href="#projects">view my works</a></button>
             </div>
 
-            <div class="w-6/10">
-                <img class="" src="./images/aug-profile1.PNG" alt="Profile photo of Augustine Darko">
+            <div class="w-full md:w-1/2 lg:w-2/5 flex-shrink-0 order-2 md:order-2 mt-8 md:mt-0">
+                
+                <img class="w-full h-auto max-w-full rounded-full md:rounded-none border-2 border-slate-300 object-cover shadow-xl mx-auto" src="./images/aug-profile1.PNG" alt="Profile photo of Augustine Darko">
             </div>
         </header>
 
-        <section id="about">
+        <section id="about" class="py-4 scroll-mt-15 bg-slate-100">
             <h2 class="flex justify-center text-4xl font-bold"><span class="font-light">About </span> Me</h2>
 
-            <div class="h-screen grid grid-cols-2 justify-items-center items-center">
+            <div class="flex flex-col md:flex-row justify-center items-center m-10">
 
-                <div class="w-3/6">
-                    <img class="rounded-full border-2 border-slate" src="./images/aug-profile3.PNG" alt="Another Profile Image">
+                <div class="hidden md:block w-full md:w-2/6">
+                    <img class="rounded-full border-2 border-slate-300 shadow-xl mx-auto" src="./images/aug-profile3.PNG" alt="Another Profile Image">
                 </div>
 
-                <div class="w-8/10">
+                <div class="w-full text-center md:w-8/10 md:text-left md:px-10">
                     <p>I'm a passionate
                     designer and aspiring frontend web developer with a growing skill set in both creative and technical fields.
                     My journey began with graphic design, where I focused on creating bold, clean, and memorable logos that
@@ -70,12 +80,12 @@
             </div>
         </section>
 
-        <section id="projects">
-            <h2 class="flex justify-center text-4xl font-bold"><span class="font-light">My </span> Projects</h2>
+        <section id="projects" class="py-4 scroll-mt-15">
+            <h2 class="flex justify-center text-4xl font-bold py-4"><span class="font-light">My </span> Projects</h2>
 
-            <h3 class="flex justify-center text-2xl font-semibold">Web Development Projects</h3>
+            <h3 class="flex justify-center text-2xl font-semibold pb-4">Web Development Projects</h3>
 
-            <div class="grid grid-cols-3 gap-8">
+            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 px-4 md:px-10 lg:px-20">
 
                 <div class="bg-white p-6 rounded-2xl shadow-md">
                     <a href="http://">
@@ -98,9 +108,9 @@
 
             </div>
 
-            <h3 class="flex justify-center text-2xl font-semibold">Graphic Design Projects</h3>
+            <h3 class="flex justify-center text-2xl font-semibold py-4">Graphic Design Projects</h3>
 
-            <div class="grid grid-cols-4 gap-8">
+            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4 px-4 md:px-10 lg:px-20">
 
                 <div class="bg-white p-6 rounded-2xl shadow-md">
                     <img src="./images/GAF-logo.png" alt="Gustine Art and Frames Logo">
@@ -123,11 +133,11 @@
             </div>
         </section>
 
-        <section id="skills">
+        <section id="skills" class="py-4 scroll-mt-15">
 
-            <h2 class="flex justify-center text-4xl font-bold"><span class="font-light">My </span> Skills</h2>
+            <h2 class="flex justify-center text-4xl font-bold py-4"><span class="font-light">My </span> Skills</h2>
 
-            <div class="grid grid-cols-3 gap-10 mx-10">
+            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 px-4 md:px-10 lg:px-20 mt-10">
 
                 <div class="bg-white p-6 rounded-2xl shadow-md">
                     <h4 class="text-xl font-semibold">Frontend Development</h4>
@@ -147,55 +157,55 @@
             </div>
         </section>
 
-        <section id="resume">
-            <h2 class="flex justify-center text-4xl font-bold"><span class="font-light">My </span> Resume</h2>
+        <section id="resume" class="py-4 scroll-mt-15">
+            <h2 class="flex justify-center text-4xl font-bold py-4"><span class="font-light">My </span> Resume</h2>
 
-            <div class="grid grid-cols-2 gap-12 mx-20">
+            <div class="container mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
 
                 <div class="grid gap-y-8">
 
-                    <h4 class="text-xl font-semibold">Education</h4>
+                    <h3 class="text-2xl font-semibold">Education</h3>
 
                     <div class="bg-white p-6 rounded-2xl shadow-md">
                         <h4 class="font-semibold">Web Development</h4>
                         <p>This was an trainning program where the team guided me in the growing technical and soft skills to strive in the tech feild.</p>
-                        <h5>MEST - Generation Ghana</h5>
+                        <h5 class="italic">MEST - Generation Ghana</h5>
                     </div>
 
                     <div class="bg-white p-6 rounded-2xl shadow-md">
                         <h4 class="font-semibold">Visual Art</h4>
                         <p>My passion for art and design was exploried at this level of my education, in the fields of picture making, sculpture, and art history.</p>
-                        <h5>Koforidua Senior High Technical School</h5>
+                        <h5 class="italic">Koforidua Senior High Technical School</h5>
                     </div>
 
                     <div class="bg-white p-6 rounded-2xl shadow-md">
                         <h4 class="font-semibold">Publishing Studies (Printing Technology)</h4>
                         <p>At this stage I ventured into the feild of designing and printing, its history and the current industy.</p>
-                        <h5>Kwame Nkrumah University of Science and Technology</h5>
+                        <h5 class="italic">Kwame Nkrumah University of Science and Technology</h5>
                     </div>
 
                 </div>
 
                 <div class="grid gap-y-8">
                     
-                    <h4 class="text-xl font-semibold">Experience</h4>
+                    <h3 class="text-2xl font-semibold">Experience</h3>
 
                     <div class="bg-white p-6 rounded-2xl shadow-md">
                         <h4 class="font-semibold">Frontend Web Development</h4>
                         <p>I have developed skills and knowledge in working with the various tools in building the frontend of webpages.</p>
-                        <h5>Project Development</h5>
+                        <h5 class="italic">Project Development</h5>
                     </div>
 
                     <div class="bg-white p-6 rounded-2xl shadow-md">
                         <h4 class="font-semibold">Graphic Design</h4>
                         <p>My self taught skills in Adobe Illustrator has been used in the development of logos that depicts and represent its purpose.</p>
-                        <h5>Freelance</h5>
+                        <h5 class="italic">Freelance</h5>
                     </div>
 
                     <div class="bg-white p-6 rounded-2xl shadow-md">
                         <h4 class="font-semibold">Graphic Packaging Limited</h4>
                         <p>This working experience taught me the essence and results of effective communication, to the smooth running of the workflow of a production industry.</p>
-                        <h5>Assistant Press Coordinator</h5>
+                        <h5 class="italic">Assistant Press Coordinator</h5>
                     </div>
 
                 </div>
@@ -208,43 +218,43 @@
 
         </section>
 
-        <section id="testimonials">
+        <section id="testimonials" class="py-4 scroll-mt-15">
 
-            <h2 class="flex justify-center text-4xl font-bold"><span class="font-light">Peer </span> Recommendations</h2>
+            <h2 class="flex justify-center text-4xl font-bold py-4"><span class="font-light">Peer </span> Recommendations</h2>
 
-            <div class="grid grid-cols-3 gap-8">
+            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 px-4 md:px-10 lg:px-20 text-[#e0e0e0] mt-10">
 
                 <div class="bg-white p-6 rounded-2xl shadow-md">
                     <img class="rounded-full w-[3rem]" src="./images/danitasprofile.JPG" alt="Danita's profile image">
                     <div>
                         <p>"A highly skilled and dedicated professional with expertise in web development and a creative eye for design. If you're looking for someone who's both skilled and easy to collaborate with, I genuinely recommend him."</p>
-                        <h5>Danita Lamptey - Data Analyst & Graphic Designer</h5>
+                        <h5 class="italic text-base font-semibold">Danita Lamptey - Data Analyst & Graphic Designer</h5>
                     </div>
                 </div>
                 <div class="bg-white p-6 rounded-2xl shadow-md">
                     <img class="rounded-full w-[3rem]" src="./images/stephen-profile.PNG" alt="Stephen's profile image">
                     <div>
                         <p>"Augustine Darko is a creative and open-minded professional with a diverse skill set. I highly recommend him."</p>
-                        <h5>Stephen Dwumfour - Web Developer</h5>
+                        <h5 class="italic text-base font-semibold">Stephen Dwumfour - Web Developer</h5>
                     </div>
                 </div>
                 <div class="bg-white p-6 rounded-2xl shadow-md">
                     <img class="rounded-full w-[3rem]" src="./images/fidel-profile.PNG" alt="Fidel's profile image">
                     <div>
                         <p>"Working with Augustine has been a refreshing experience. He brings creativity, curiosity, and a thoughtful approach to everything he does, and would gladly recommend him."</p>
-                        <h5>Fidel Lamptey - Graphic Designer and Creative Director</h5>
+                        <h5 class="italic text-base font-semibold">Fidel Lamptey - Graphic Designer and Creative Director</h5>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="bg-slate-300 text-slate-800">
+        <section id="contact" class="bg-slate-400 text-slate-900 py-4 scroll-mt-15">
 
-            <h2 class="flex justify-center text-4xl font-bold"><span class="font-light">Contact </span> Me</h2>
+            <h2 class="flex justify-center text-4xl font-bold py-4"><span class="font-light">Contact </span> Me</h2>
 
-            <h4 class="flex justify-center text-xl font-semibold">Get In Touch😁</h4>
+            <h4 class="flex justify-center text-xl font-semibold mb-4">Get In Touch😁</h4>
 
-            <div class="flex justify-around gap-4">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
                 <div>
                     <h4>Email</h4>
                     <p><a href="mailto:gustine369@gmail.com">gustine369@gmail.com</a></p>

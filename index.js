@@ -1,3 +1,11 @@
+const menuBtn = document.getElementById('menuBtn');
+const navLinks = document.getElementById('navLinks');
+
+menuBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('hidden');
+    });
+
+
 // Declare variable to store navbar element
 const navElement = document.getElementById('navbar');
 const navTextElements = document.querySelectorAll('.nav-text');
