@@ -1,9 +1,37 @@
-const menuBtn = document.getElementById('menuBtn');
-const navLinks = document.getElementById('navLinks');
+document.addEventListener('DOMContentLoaded', function() {
+    const menuBtn = document.getElementById('menuBtn');
+    const closeMenuBtn = document.getElementById('closeMenuBtn'); // Get the new close button
+    const navLinks = document.getElementById('navLinks');
 
-menuBtn.addEventListener('click', () => {
-    navLinks.classList.toggle('hidden');
+    // Function to open the sidebar
+    function openSidebar() {
+        navLinks.classList.remove('-translate-x-full'); // Slides it in
+        navLinks.classList.add('translate-x-0');      // Makes it fully visible
+    }
+
+    // Function to close the sidebar
+    function closeSidebar() {
+        navLinks.classList.remove('translate-x-0');    // Moves it back to off-screen
+        navLinks.classList.add('-translate-x-full');  // Hides it completely off-screen
+    }
+
+    // Event listener for opening the sidebar (hamburger icon)
+    if (menuBtn) {
+        menuBtn.addEventListener('click', openSidebar);
+    }
+
+    // Event listener for closing the sidebar (new 'X' button)
+    if (closeMenuBtn) {
+        closeMenuBtn.addEventListener('click', closeSidebar);
+    }
+
+    // Optional: Close sidebar when a navigation link is clicked (common UX)
+    const navLinksList = navLinks.querySelectorAll('a');
+    navLinksList.forEach(link => {
+        link.addEventListener('click', closeSidebar);
     });
+});
+
 
 
 // Declare variable to store navbar element
