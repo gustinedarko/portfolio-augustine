@@ -7,6 +7,37 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="./index.js" defer></script>
     <title>ADarko Portfolio</title>
+    <style>
+        @keyframes slide {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        .animate-marquee {
+            animation: slide 30s linear infinite;
+            white-space: nowrap;
+            display: flex;
+            width: fit-content;
+            min-width: 200%;
+            will-change: transform;
+        }
+
+        .marquee-container:hover .animate-marquee {
+            animation-play-state: paused;
+        }
+
+        .logo-image {
+            width: 80px;
+            height: 100px;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
+    </style>
 </head>
 
 <body class="text-lg font-normal text-slate-700 bg-slate-200">
@@ -99,7 +130,14 @@
                 </div>
 
                 <div class="w-full text-center md:w-8/10 md:text-left md:px-10">
-                    <p>I'm a passionate designer and aspiring frontend web developer with a growing skill set in both creative and technical fields. My journey began with graphic design, where I focused on creating bold, clean, and memorable logos that bring brand ideas to life. Over time, my curiosity about how design meets functionality led me to explore web development. I'm currently enrolled in a frontend web development training program, where I've already built and hosted my first website and continue to grow my skills in HTML, CSS, and JavaScript. With each project, I aim to blend design aesthetics with user-friendly functionality. I'm excited to keep learning, building, and turning ideas into digital experiences that matter</p>
+                    <p>I'm a passionate designer and aspiring frontend web developer with a growing skill set in both
+                        creative and technical fields. My journey began with graphic design, where I focused on creating
+                        bold, clean, and memorable logos that bring brand ideas to life. Over time, my curiosity about
+                        how design meets functionality led me to explore web development. I'm currently enrolled in a
+                        frontend web development training program, where I've already built and hosted my first website
+                        and continue to grow my skills in HTML, CSS, and JavaScript. With each project, I aim to blend
+                        design aesthetics with user-friendly functionality. I'm excited to keep learning, building, and
+                        turning ideas into digital experiences that matter</p>
                 </div>
             </div>
         </section>
@@ -113,27 +151,60 @@
             <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 px-4 md:px-10 lg:px-20">
 
                 <div class="bg-white p-6 rounded-2xl shadow-md transform hover:scale-105 transition duration-300">
-                    <a href="http://klothing-augustine-darkos-projects.vercel.app/" target="_blank">
-                        <img class="border-1 border-slate" src="./images/klothing-site-image.png"
-                            alt="Klothing website">
+                    <a href="https://adwuma-craft.netlify.app/" target="_blank">
+                        <img class="border-1 border-slate" src="./images/adwuma-craft.jpeg" alt="Aduma Craft Website">
                     </a>
-                    <p class="mt-2">Developed my foundational website using HTML and CSS, mastering multi-page architecture and
-                        successful deployment processes.</p>
+                    <p class="mt-2">Worked with a team to build a React-based craft marketplace enabling local artisans to list, manage, and promote handmade products through a clean and responsive interface.</p>
                 </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow-md transform hover:scale-105 transition duration-300">
+                    <a href="https://mefieconnect.netlify.app/" target="_blank">
+                        <img class="border-1 border-slate" src="./images/mefieconnect.jpeg"
+                            alt="MefieConnect Website ">
+                    </a>
+                    <p class="mt-2">Collaborated on a React and Tailwind CSS rental platform enabling direct landlord–tenant interaction, with mock data integration and basic admin moderation tools.</p>
+                </div>
+                
                 <div class="bg-white p-6 rounded-2xl shadow-md transform hover:scale-105 transition duration-300">
                     <a href="http://team-emerald-ochre.vercel.app/" target="_blank">
                         <img class="border-1 border-slate" src="./images/emeraldd&d.jpeg"
                             alt="Drag and drop Demonstration API">
                     </a>
-                    <p class="mt-2">Engineered a Drag-and-Drop Gamified Demonstration for a group presentation, showcasing HTML APIs
+                    <p class="mt-2">Engineered a Drag-and-Drop Gamified Demonstration for a group presentation,
+                        showcasing HTML APIs
                         to colleagues using HTML, CSS, and JavaScript.</p>
                 </div>
+                <!-- <div class="bg-white p-6 rounded-2xl shadow-md transform hover:scale-105 transition duration-300">
+                    <a href="https://endearing-salamander-1a9811.netlify.app/" target="_blank">
+                        <img class="border-1 border-slate" src="./images/"
+                            alt="ABC Book Store website">
+                    </a>
+                    <p class="mt-2">Helped build a React-powered bookstore web app featuring product listings, search functionality, and a clean, user-friendly layout.</p>
+                </div> -->
+                <div class="bg-white p-6 rounded-2xl shadow-md transform hover:scale-105 transition duration-300">
+                    <a href="http://klothing-augustine-darkos-projects.vercel.app/" target="_blank">
+                        <img class="border-1 border-slate" src="./images/klothing-site-image.png"
+                            alt="Klothing website">
+                    </a>
+                    <p class="mt-2">Developed my foundational website using HTML and CSS, mastering multi-section
+                        architecture and
+                        successful deployment processes.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-md transform hover:scale-105 transition duration-300">
+                    <a href="https://food-fun-two.vercel.app/" target="_blank">
+                        <img class="border-1 border-slate" src="./images/food-fun.jpeg"
+                            alt="Food Website ">
+                    </a>
+                    <p class="mt-2">Practiced core frontend skills by building a responsive food-themed website using HTML and Tailwind CSS.</p>
+                </div>
+
                 <div class="bg-white p-6 rounded-2xl shadow-md transform hover:scale-105 transition duration-300">
                     <a href="http://portfolio-augustine.vercel.app/" target="_blank">
                         <img class="border-1 border-slate" src="./images/portfolio-website.jpeg"
                             alt="My portfolio website">
                     </a>
-                    <p class="mt-2">Designed and developed this portfolio to effectively portray my evolving skills and progress as a
+                    <p class="mt-2">Designed and developed this portfolio to effectively portray my evolving skills and
+                        progress as a
                         junior web developer, utilizing HTML, CSS, and JavaScript.
                     </p>
                 </div>
@@ -146,23 +217,27 @@
 
                 <div class="bg-white p-6 rounded-2xl shadow-md">
                     <img src="./images/GAF-logo.png" alt="Gustine Art and Frames Logo">
-                    <p class="mt-4">Created the primary Gustine Art and Frames logo in Adobe Illustrator, establishing its core brand
+                    <p class="mt-4">Created the primary Gustine Art and Frames logo in Adobe Illustrator, establishing
+                        its core brand
                         identity.</p>
                 </div>
                 <div class="bg-white p-6 rounded-2xl shadow-md">
                     <img src="./images/GAF-Flyer .jpg" alt="Gustine Art and Frames flyer">
-                    <p class="mt-2">Developed a promotional flyer for Gustine Art and Frames using Adobe Photoshop, designed to
+                    <p class="mt-2">Developed a promotional flyer for Gustine Art and Frames using Adobe Photoshop,
+                        designed to
                         highlight key services.</p>
                 </div>
                 <div class="bg-white p-6 rounded-2xl shadow-md">
                     <img src="./images/SF-blackb.png" alt="SkilzField Logo">
                     <hr>
-                    <p class="mt-4">Designed the core SkilzField logo in Adobe Illustrator, serving as a foundational element for the
+                    <p class="mt-4">Designed the core SkilzField logo in Adobe Illustrator, serving as a foundational
+                        element for the
                         project's visual identity.</p>
                 </div>
                 <div class="bg-white p-6 rounded-2xl shadow-md">
                     <img src="./images/SF-black.png" alt="SkilzField Silhouette Logo">
-                    <p class="mt-4">Crafted the SkilzField Silhouette Logo using Adobe Illustrator, intended for versatile
+                    <p class="mt-4">Crafted the SkilzField Silhouette Logo using Adobe Illustrator, intended for
+                        versatile
                         application across various project components.</p>
                 </div>
 
@@ -177,21 +252,50 @@
             <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 px-4 md:px-10 lg:px-20 mt-10">
 
                 <div class="bg-white p-6 rounded-2xl shadow-md">
-                    <h4 class="text-xl font-semibold mb-2">Frontend Development</h4>
+                    <h4 class="text-2xl font-semibold mb-2">Frontend Development</h4>
                     <p>HTML, CSS, Responsive Web Design, JavaScript, and React.</p>
                 </div>
 
                 <div class="bg-white p-6 rounded-2xl shadow-md">
-                    <h4 class="text-xl font-semibold mb-2">Tools & Technologies</h4>
+                    <h4 class="text-2xl font-semibold mb-2">Tools & Technologies</h4>
                     <p>VS Code, Git, GitHub, Tailwind CSS, and Figma.</p>
                 </div>
 
                 <div class="bg-white p-6 rounded-2xl shadow-md">
-                    <h4 class="text-xl font-semibold mb-2">Graphic Design</h4>
+                    <h4 class="text-2xl font-semibold mb-2">Graphic Design</h4>
                     <p>Adobe Illustrator, and Adobe InDesign.</p>
                 </div>
-
             </div>
+
+            <div class="relative overflow-hidden flex flex-col items-center justify-center mt-10">
+                <div class="w-full overflow-hidden marquee-container">
+                    <div class="animate-marquee gap-12">
+                        <img class="logo-image" src="./images/ai-skills.jpg" alt="AI Skills">
+                        <img class="logo-image" src="./images/figma-skills.jpg" alt="Figma Skills">
+                        <img class="logo-image" src="./images/css-skills.png" alt="CSS Skills">
+                        <img class="logo-image" src="./images/html-skills.png" alt="HTML Skills">
+                        <img class="logo-image" src="./images/js-skills.png" alt="JavaScript Skills">
+                        <img class="logo-image" src="./images/tailwind-css-skills.jpg" alt="Tailwind CSS Skills">
+                        <img class="logo-image" src="./images/react-skills.png" alt="React Skills">
+                        <img class="logo-image" src="./images/git-skills.png" alt="Git Skills">
+                        <img class="logo-image" src="./images/github-skills-black.jpg" alt="GitHub Skills Black">
+                        <img class="logo-image" src="./images/icon8-lunacy-skills.jpeg" alt="Lunacy Skills">
+                        <img class="logo-image" src="./images/indesign-skills.jpg" alt="InDesign Skills">
+                        <img class="logo-image" src="./images/ai-skills.jpg" alt="AI Skills">
+                        <img class="logo-image" src="./images/figma-skills.jpg" alt="Figma Skills">
+                        <img class="logo-image" src="./images/css-skills.png" alt="CSS Skills">
+                        <img class="logo-image" src="./images/html-skills.png" alt="HTML Skills">
+                        <img class="logo-image" src="./images/js-skills.png" alt="JavaScript Skills">
+                        <img class="logo-image" src="./images/tailwind-css-skills.jpg" alt="Tailwind CSS Skills">
+                        <img class="logo-image" src="./images/react-skills.png" alt="React Skills">
+                        <img class="logo-image" src="./images/git-skills.png" alt="Git Skills">
+                        <img class="logo-image" src="./images/github-skills-black.jpg" alt="GitHub Skills Black">
+                        <img class="logo-image" src="./images/icon8-lunacy-skills.jpeg" alt="Lunacy Skills">
+                        <img class="logo-image" src="./images/indesign-skills.jpg" alt="InDesign Skills">
+                    </div>
+                </div>
+            </div>
+
         </section>
 
         <section id="resume" class="py-4 scroll-mt-15">
@@ -206,19 +310,23 @@
 
                     <div class="bg-white p-6 rounded-2xl shadow-md">
                         <h4 class="font-semibold">Web Development Training</h4>
-                        <p class="py-2">Completed intensive training focused on developing foundational technical skills in web development, alongside essential soft skills crucial for thriving in the tech industry.</p>
+                        <p class="py-2">Completed intensive training focused on developing foundational technical skills
+                            in web development, alongside essential soft skills crucial for thriving in the tech
+                            industry.</p>
                         <h5 class="italic">MEST Africa - Generation Ghana</h5>
                     </div>
 
                     <div class="bg-white p-6 rounded-2xl shadow-md">
                         <h4 class="font-semibold">Visual Art</h4>
-                        <p class="py-2">Explored core skills in art and design, exploring foundational concepts and specializing in areas such as painting, sculpture, and art history.</p>
+                        <p class="py-2">Explored core skills in art and design, exploring foundational concepts and
+                            specializing in areas such as painting, sculpture, and art history.</p>
                         <h5 class="italic">Koforidua Senior High Technical School</h5>
                     </div>
 
                     <div class="bg-white p-6 rounded-2xl shadow-md">
                         <h4 class="font-semibold">Publishing Studies (Printing Technology)</h4>
-                        <p class="py-2">Gained comprehensive knowledge in design principles, printing technologies, and the historical and current industry dynamics within the printing and publishing sector.</p>
+                        <p class="py-2">Gained comprehensive knowledge in design principles, printing technologies, and
+                            the historical and current industry dynamics within the printing and publishing sector.</p>
                         <h5 class="italic">Kwame Nkrumah University of Science and Technology</h5>
                     </div>
 
@@ -238,13 +346,17 @@
 
                     <div class="bg-white p-6 rounded-2xl shadow-md">
                         <h4 class="font-semibold">Graphic Design</h4>
-                        <p class="py-2">Designing impactful logos and diverse visual assets for various clients, effectively conveying brand identities and aligning designs with project objectives using Adobe Illustrator and design principles.</p>
+                        <p class="py-2">Designing impactful logos and diverse visual assets for various clients,
+                            effectively conveying brand identities and aligning designs with project objectives using
+                            Adobe Illustrator and design principles.</p>
                         <h5 class="italic">Freelance</h5>
                     </div>
 
                     <div class="bg-white p-6 rounded-2xl shadow-md">
                         <h4 class="font-semibold">Graphic Packaging Limited (G-PAK Ltd)</h4>
-                        <p class="py-2">Coordinated production processes and fostered effective inter-team communication to optimize operational efficiency and ensure timely output within a dynamic manufacturing environment.</p>
+                        <p class="py-2">Coordinated production processes and fostered effective inter-team communication
+                            to optimize operational efficiency and ensure timely output within a dynamic manufacturing
+                            environment.</p>
                         <h5 class="italic">Assistant Press Coordinator</h5>
                     </div>
 
